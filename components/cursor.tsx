@@ -1,14 +1,16 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion,Variants, TargetAndTransition } from 'framer-motion'
+
+type MixBlendMode = 'normal' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity';
 
 export default function Cursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [cursorVariant, setCursorVariant] = useState('default')
 
   useEffect(() => {
-    const mouseMove = (e) => {
+    const mouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY,
@@ -22,20 +24,21 @@ export default function Cursor() {
     }
   }, [])
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-      mixBlendMode: 'difference',
-    },
-  }
+ const variants: Variants = {
+  default: {
+    x: mousePosition.x - 16,
+    y: mousePosition.y - 16,
+  },
+  text: {
+    height: 150,
+    width: 150,
+    x: mousePosition.x - 75,
+    y: mousePosition.y - 75,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    mixBlendMode: 'difference' as MixBlendMode,
+  },
+};
+
 
   const textEnter = () => setCursorVariant('text')
   const textLeave = () => setCursorVariant('default')

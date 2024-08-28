@@ -7,6 +7,14 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { useInView } from 'react-intersection-observer'
 
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+};
+
+
 const projects = [
   {
     title: 'Proyecto 1',
@@ -53,7 +61,7 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -87,7 +95,7 @@ function ProjectCard({ project, index }) {
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           <p className="text-muted-foreground mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags.map((tag, tagIndex) => (
+            {project.tags.map((tag: string, tagIndex: number) => (
               <span
                 key={tagIndex}
                 className="px-2 py-1 bg-primary/10 text-primary rounded text-sm"

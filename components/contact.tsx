@@ -7,7 +7,7 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { AIRecommendations } from '@/components/aiRecomendation'
+/* import { AIRecommendations } from '@/components/aiRecomendation' */
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -21,16 +21,15 @@ export default function Contact() {
     message: '',
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Aquí iría la lógica para enviar el formulario
     console.log('Formulario enviado:', formData)
   }
-
   return (
     <section id="contacto" className="py-20 px-4">
       <motion.h2
@@ -106,7 +105,7 @@ export default function Contact() {
             </motion.div>
           </form>
         </Card>
-        <AIRecommendations userInput={formData.message} />
+{/*         <AIRecommendations userInput={formData.message} /> */}
       </div>
     </section>
   )

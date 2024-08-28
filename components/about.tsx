@@ -6,52 +6,52 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 export default function About() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    })
 
-  return (
-    <section id="sobre-mi" className="py-20 px-4">
-      <motion.h2
-        className="text-3xl md:text-4xl font-bold mb-12 text-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
-        Sobre Mí
-      </motion.h2>
-      <div ref={ref} className="max-w-4xl mx-auto">
-        <Card className="p-6 mb-8 bg-card text-card-foreground">
-          <motion.p
-            className="text-lg mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Soy un desarrollador full stack apasionado por crear aplicaciones web robustas y escalables. 
-            Con experiencia en tecnologías front-end y back-end, me especializo en construir soluciones 
-            completas que combinan interfaces de usuario atractivas con arquitecturas de servidor eficientes.
-          </motion.p>
-          <motion.p
-            className="text-lg mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Mi enfoque se centra en la creación de código limpio, mantenible y eficiente. Siempre estoy 
-            buscando nuevas formas de optimizar el rendimiento y mejorar la experiencia del usuario en 
-            cada proyecto que emprendo.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Button>Descargar CV</Button>
-          </motion.div>
-        </Card>
-      </div>
-    </section>
-  )
+    return (
+        <section id="sobre-mi" className="py-20 px-4">
+            <motion.h2
+                className="text-3xl md:text-4xl font-bold mb-12 text-center"
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8 }}
+            >
+                Sobre Mí
+            </motion.h2>
+            <div ref={ref} className="max-w-4xl mx-auto">
+                <Card className="p-6 mb-8 bg-card text-card-foreground">
+                    <motion.p
+                        className="text-lg mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        Soy un desarrollador full stack apasionado por crear aplicaciones web robustas y escalables.
+                        Con experiencia en tecnologías front-end y back-end, me especializo en construir soluciones
+                        completas que combinan interfaces de usuario atractivas con arquitecturas de servidor eficientes.
+                    </motion.p>
+                    <motion.p
+                        className="text-lg mb-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        Mi enfoque se centra en la creación de código limpio, mantenible y eficiente. Siempre estoy
+                        buscando nuevas formas de optimizar el rendimiento y mejorar la experiencia del usuario en
+                        cada proyecto que emprendo.
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={inView ? { opacity: 1 } : {}}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                        <Button>Descargar CV</Button>
+                    </motion.div>
+                </Card>
+            </div>
+        </section>
+    )
 }
