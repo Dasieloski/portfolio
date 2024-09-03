@@ -22,16 +22,16 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/Dasieloski" className="text-foreground hover:text-primary transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/dasiel-torres-3b6166320/" className="text-foreground hover:text-primary transition-colors">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://x.com/DasieIoski" className="text-foreground hover:text-primary transition-colors">
               <Twitter className="h-6 w-6" />
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/dasieloski/" className="text-foreground hover:text-primary transition-colors">
               <Instagram className="h-6 w-6" />
             </a>
           </motion.div>

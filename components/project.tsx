@@ -6,34 +6,37 @@ import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { useInView } from 'react-intersection-observer'
+import Link from 'next/link'
 
 type Project = {
   title: string;
   description: string;
   image: string;
   tags: string[];
+  link: string;
 };
 
 
 const projects = [
   {
     title: 'Proyecto 1',
-    description: 'Una aplicación web innovadora que revoluciona la forma en que interactuamos con la tecnología.',
-    image: '/placeholder.svg?height=300&width=400',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    description: 'Una aplicación web e-commerce dedicado a articulos y suplementos para tatuar.',
+    image: '/nk.png',
+    tags: ['NextJS', 'Node.js', 'Strapi', 'JavaScript', 'Typescript'],
+    link: "mktattoo.vercel.app"
   },
-  {
-    title: 'Proyecto 2',
-    description: 'Plataforma de e-learning que utiliza IA para personalizar la experiencia de aprendizaje.',
-    image: '/placeholder.svg?height=300&width=400',
-    tags: ['Vue.js', 'Python', 'TensorFlow'],
-  },
-  {
-    title: 'Proyecto 3',
-    description: 'Aplicación móvil de realidad aumentada para exploración urbana y turismo.',
-    image: '/placeholder.svg?height=300&width=400',
-    tags: ['React Native', 'ARKit', 'Firebase'],
-  },
+  /*  {
+     title: 'Proyecto 2',
+     description: 'Plataforma de e-learning que utiliza IA para personalizar la experiencia de aprendizaje.',
+     image: '/placeholder.svg?height=300&width=400',
+     tags: ['Vue.js', 'Python', 'TensorFlow'],
+   },
+   {
+     title: 'Proyecto 3',
+     description: 'Aplicación móvil de realidad aumentada para exploración urbana y turismo.',
+     image: '/placeholder.svg?height=300&width=400',
+     tags: ['React Native', 'ARKit', 'Firebase'],
+   }, */
 ]
 
 export default function Projects() {
@@ -104,7 +107,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               </span>
             ))}
           </div>
-          <Button>Ver detalles</Button>
+          <a href={`https://${project.link}`} target="_blank" rel="noopener noreferrer">
+            <Button>Ver detalles</Button>
+          </a>
+
+
         </div>
       </Card>
     </motion.div>

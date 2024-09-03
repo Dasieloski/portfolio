@@ -1,5 +1,7 @@
 "use client";
 
+'use client'
+
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'next-themes'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -10,8 +12,6 @@ import Skills from '@/components/skills'
 import About from '@/components/about'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
-import Cursor from '@/components/cursor'
-/* import AIAssistant from '@/components/AIAssistant' */
 import { ScrollProvider } from '@/context/ScrollContext'
 
 export default function Portfolio() {
@@ -26,8 +26,7 @@ export default function Portfolio() {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <ScrollProvider>
-        <div className="min-h-screen bg-background text-foreground overflow-hidden">
-          <Cursor />
+        <div className="min-h-screen bg-background text-foreground">
           <Navbar />
           <AnimatePresence mode="wait">
             <motion.main
@@ -44,7 +43,6 @@ export default function Portfolio() {
             </motion.main>
           </AnimatePresence>
           <Footer />
-        {/*   <AIAssistant /> */}
         </div>
       </ScrollProvider>
     </ThemeProvider>
