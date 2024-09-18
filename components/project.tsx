@@ -22,21 +22,23 @@ const projects = [
     title: 'Proyecto 1',
     description: 'Una aplicación web e-commerce dedicado a articulos y suplementos para tatuar.',
     image: '/nk.png',
-    tags: ['NextJS', 'Node.js', 'Strapi', 'JavaScript', 'Typescript'],
+    tags: ['NextJS', 'Node.js', 'Strapi', 'JavaScript', 'Typescript','Tailwind-CSS','shadcn/ui'],
     link: "mktattoo.vercel.app"
   },
-  /*  {
-     title: 'Proyecto 2',
-     description: 'Plataforma de e-learning que utiliza IA para personalizar la experiencia de aprendizaje.',
-     image: '/placeholder.svg?height=300&width=400',
-     tags: ['Vue.js', 'Python', 'TensorFlow'],
-   },
+   {
+    title: 'Proyecto 2',
+    description: 'Un juego clásico de Sudoku.',
+    image: '/Sudoku.png',
+    tags: ['NextJS', 'Node.js', 'Typescript','Tailwind-CSS','shadcn/ui'],
+    link: "sudokumaritza.vercel.app"
+  },
    {
      title: 'Proyecto 3',
-     description: 'Aplicación móvil de realidad aumentada para exploración urbana y turismo.',
-     image: '/placeholder.svg?height=300&width=400',
-     tags: ['React Native', 'ARKit', 'Firebase'],
-   }, */
+     description: 'Sitio web de un gimnasio que gestiona clientes, entrenadores y membresias',
+     image: '/gymvictoria.png',
+     tags: ['NextJS', 'Typescript', 'Supabase','NextAuth','PostgreSQL','Tailwind-CSS','shadcn/ui'],
+     link: "gymvictoria.vercel.app"
+   },
 ]
 
 export default function Projects() {

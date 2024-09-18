@@ -25,11 +25,14 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log('Formulario enviado:', formData)
+    const whatsappMessage = `Nombre: ${formData.name}%0AEmail: ${formData.email}%0AMensaje: ${formData.message}`
+    const whatsappUrl = `https://wa.me/54710329?text=${whatsappMessage}` // Reemplaza 1234567890 con tu número de WhatsApp
+
+    window.open(whatsappUrl, '_blank')
   }
+
   return (
     <section id="contacto" className="py-20 px-4">
       <motion.h2
