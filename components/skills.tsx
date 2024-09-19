@@ -14,6 +14,9 @@ const skills = [
 /*   { name: 'MongoDB', icon: '/mongodb.svg' }, */
   { name: 'Git', icon: '/git.svg' },
   { name: 'Docker', icon: '/docker.svg' },
+  { name: 'CSS', icon: '/css.svg' },
+  { name: 'HTML', icon: '/html.svg' },
+  { name: 'Tailwind CSS', icon: '/tailwind.svg' },
 /*   { name: 'AWS', icon: '/aws.svg' }, */
 ]
 

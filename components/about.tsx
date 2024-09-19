@@ -29,7 +29,7 @@ export default function About() {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Desarrollador Full Stack apasionado por crear soluciones innovadoras y de alto impacto. Con experiencia en JavaScript, TypeScript, HTML, CSS, y PostgreSQL. Recientemente graduado de la Universidad de Ciencias Informáticas, he desarrollado varios proyectos web, aplicando buenas prácticas en desarrollo ágil y versionado de código. Busco una oportunidad en una empresa donde pueda crecer profesionalmente y aportar mi creatividad a través de soluciones tecnológicas de vanguardia.
+                        Desarrollador Full Stack apasionado por crear soluciones innovadoras y de alto impacto. Recientemente graduado de la Universidad de Ciencias Informáticas, he desarrollado varios proyectos web, aplicando buenas prácticas en desarrollo ágil y versionado de código. Busco una oportunidad en una empresa donde pueda crecer profesionalmente y aportar mi creatividad a través de soluciones tecnológicas de vanguardia.
                     </motion.p>
                     <motion.p
                         className="text-lg mb-6"
