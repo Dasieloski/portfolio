@@ -62,12 +62,12 @@ export default function About() {
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
                                 <DropdownMenuItem>
-                                    <a href="/api/download?file=Dasiel%20Torres%20CV%20Resume%20(español).pdf" className="w-full">
+                                    <a href="/Dasiel%20Torres%20CV%20Resume%20(español).pdf" download className="w-full">
                                         Español
                                     </a>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <a href="/api/download?file=Dasiel%20Torres%20CV%20Resume%20(inglés).pdf" className="w-full">
+                                    <a href="/Dasiel%20Torres%20CV%20Resume%20(inglés).pdf" download className="w-full">
                                         English
                                     </a>
                                 </DropdownMenuItem>
