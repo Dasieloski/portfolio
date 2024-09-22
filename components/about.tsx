@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from 'lucide-react'
 
@@ -62,12 +62,12 @@ export default function About() {
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
                                 <DropdownMenuItem>
-                                    <a href="/Dasiel Torres CV - Español.pdf" download="Dasiel Torres CV Resume (español).pdf" className="w-full">
+                                    <a href="/api/download?file=Dasiel Torres CV Resume (español).pdf" className="w-full">
                                         Español
                                     </a>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <a href="/Dasiel Torres CV - English.pdf" download="Dasiel Torres CV Resume (inglés).pdf" className="w-full">
+                                    <a href="/api/download?file=Dasiel Torres CV Resume (inglés).pdf" className="w-full">
                                         English
                                     </a>
                                 </DropdownMenuItem>
