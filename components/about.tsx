@@ -4,6 +4,13 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from 'lucide-react'
 
 export default function About() {
     const [ref, inView] = useInView({
@@ -46,9 +53,26 @@ export default function About() {
                         animate={inView ? { opacity: 1 } : {}}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <a href="/Dasiel Torres CV.pdf" download="Dasiel Torres CV.pdf">
-                            <Button>Descargar CV</Button>
-                        </a>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button>
+                                    Descargar CV
+                                    <ChevronDown className="ml-2 h-4 w-4" />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent>
+                                <DropdownMenuItem>
+                                    <a href="/Dasiel Torres CV - Español.pdf" download="Dasiel Torres CV Resume (español).pdf" className="w-full">
+                                        Español
+                                    </a>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <a href="/Dasiel Torres CV - English.pdf" download="Dasiel Torres CV Resume (inglés).pdf" className="w-full">
+                                        English
+                                    </a>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </motion.div>
                 </Card>
             </div>
